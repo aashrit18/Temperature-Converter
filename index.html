@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .mainbody{
+    background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/03/Wallpapers-HD-nice-background.jpg');  
+    height: 100vh; 
+    background-size:cover;
+}
+.boxmain{
+    background-color: white;
+    text-align: center;
+}
+#divcentreclass{
+    text-align: center;
+}
+.buttonclass{
+    margin:10px;
+}
+.bordermain{
+    border-radius: 20px;
+    padding:20px;
+    margin-left:20%;
+    margin-right: 20%;
+    margin-top: 100px;
+    padding:30px;
+}
+.resultpara{
+    color:rgb(255, 255, 1);
+    font-size: 20px;
+    font-weight: bold;
+}
+.mainhead{
+    color:white;
+    font-weight: bold;
+    font-size: 50px;
+}
+.paraborder{
+    font-size: 30px;
+    font-weight: bold;
+    color:aliceblue;
+}
+.inputbox{
+    color:white;
+    background-color: black;
+    border-radius: 10px;
+}
+#blure-background{
+    backdrop-filter: blur(14px);
+}
+        </style>
+        <title>temp calcie</title>
+        
+        <link rel="stylesheet" href="colorgrid.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> 
+    </head>
+    <body class="mainbody">
+        <div class="container" id="divcentreclass">
+            <div class="row">
+                <div class="col-12">
+        <h1 class="mainhead">Temperature converter</h1>
+        <div>
+            
+                <div class="bordermain" id="blure-background">
+                <p class="paraborder">Enter the value in <b>Fahrenheit</b></p>
+                <input id="temp" class="inputbox">
+                    <div class="buttonclass">
+                    <button type="button" onclick="myFunction1()" class="btn btn-primary">celcius</button>
+                    <button type="button" onclick="myFunction2()" class="btn btn-danger">kelvin</button>
+                    </div>
+                    <p id="celcius" class="resultpara"></p>
+
+                </div>
+                <script>
+                    function myFunction1()
+                    {
+                        let x=document.getElementById('temp').value;
+                        let cels;
+                        if(x=="" || isNaN(x))
+                        {
+                            cels="please ente any number☝️";
+                        }
+                        else
+                        {
+                            cels=5/9*(x-32);
+                        }
+                        document.getElementById('celcius').innerHTML=cels+" 🌡️";
+                        return false;
+                    }
+
+                    function myFunction2()
+                    {
+                        let x=document.getElementById('temp').value;
+                        let kelv;
+                        if(x=="" || isNaN(x))
+                        {
+                            kelv="please ente any number☝️";
+                        }
+                        else
+                        {
+                            kelv=5/9*(x+459.67);
+                        }
+                        document.getElementById('celcius').innerHTML=kelv+" 🌡️";
+                        return false;
+                    }
+                </script>
+        </div>
+        </div>
+        </div>
+        </div>
+    </body>
+</html>
